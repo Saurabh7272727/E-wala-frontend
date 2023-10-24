@@ -1,0 +1,218 @@
+.card_loading_section{
+    width: 100%;
+    height: 600px;
+    padding-top:5.6rem ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .loader {
+        border: 16px solid #f3f3f3;
+        border-radius: 50%;
+        border-top: 16px solid #3498db;
+        width: 100px;
+        height: 100px;
+        -webkit-animation: spin 2s linear infinite; /* Safari */
+        animation: spin 2s linear infinite;
+      }
+      
+      /* Safari */
+      @-webkit-keyframes spin {
+        0% { -webkit-transform: rotate(0deg); }
+        100% { -webkit-transform: rotate(360deg); }
+      }
+      
+      @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+  
+}
+
+
+
+.card_section_main{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+    padding-top: 5.4rem;
+    padding-bottom:1rem ;
+    background-color: aliceblue;
+     .card_headers_section{
+        width: 75%;
+        height: 75px;
+        background-color: white;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        gap: 4rem;
+        padding: 0rem 3rem;
+        cursor: pointer;
+        .h2{
+            font-size: 18px;
+            font-family: sans-serif;
+            font-weight: 300;
+            
+        }
+        .newh2{
+          font-size: 18px;
+          font-family: sans-serif;
+          font-weight: 300;
+          text-decoration: underline;
+          text-decoration-thickness: 3px;
+          color: rgb(35, 35, 161);
+        }
+     }
+     .page_section_edit_delect{
+      width:fit-content;
+      height: fit-content;
+      position: absolute;
+      z-index: 999;
+      background-color: rgba(255, 255, 255, 0.187);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+       p{
+        font-size: 16px;
+        transform: translateX(200px);
+        text-decoration: underline;
+        font-family: sans-serif;
+        font-weight: 300;
+        cursor: pointer;
+        color: blue;
+       }
+      .edit_page_main_section{
+        width: 500px;
+        height: 200px;
+        background-color: rgb(255, 255, 255);
+        box-shadow: 1px 1px 10px gray;
+        button{
+          padding: 0.4rem 2rem ;
+          font-size: 17px;
+          font-family: sans-serif;
+          font-weight: 300;
+          color: rgb(242, 238, 238);
+          border: none;
+          outline: none;
+          background-color: rgb(45, 140, 166);
+          margin-left: 0.4rem;
+        }
+        form{
+          width: 100%;
+          height: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          gap: 0.3rem;
+          input{
+            width: 40%;
+            height: 25px;
+            border:1px solid gray;
+            outline: none;
+            padding: 0rem 1rem;
+          }
+        }
+      }
+    }
+     .grocery_section_main{
+      width: 75%;
+      height: 600px;
+      background-color: chocolate;
+     }
+     .flipkart_main_section_card{
+      width: 75%;
+      height: fit-content;
+      background-color: aliceblue;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      .card_products_add_to_card{
+        width: 100%;
+        height: 350px;
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+     
+        .img_section_card_id{
+          width: 20%;
+          height: 60%; 
+          img{
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+          }
+        }
+        .details_abou_products_section{
+          width: 70%;
+          height: 90%;
+          padding: 2rem 2rem;
+          h2{
+            font-size: 21px;
+            font-family: sans-serif;
+            font-weight: 400;
+            text-overflow: ellipsis; 
+            overflow: hidden; 
+             white-space: nowrap; 
+             cursor: pointer;
+             &:active{
+              color: blue;
+             }
+          }
+          ul li{
+            text-overflow: ellipsis; 
+             overflow: hidden; 
+              white-space: nowrap; 
+              font-size: 15px;
+              font-family: sans-serif;
+              color: gray;
+              font-weight: 300;  
+              padding: 0.3rem;
+          }
+          .about_card_button{
+            width: 100%;
+            height: 100px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            h3{
+              text-overflow: ellipsis;
+              white-space: nowrap;
+              overflow: hidden;
+              width: 30%;
+              font-size: 17px;
+              font-family: sans-serif;
+              font-weight: 300;
+              color: rgb(83, 83, 206);
+            }
+            .button_collection_card{
+              width: 50%;
+              height: 100%;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              gap: 1rem;
+              form input{
+                display: none;
+              }
+              button{
+                padding: 0.4rem 2rem ;
+                font-size: 17px;
+                font-family: sans-serif;
+                font-weight: 300;
+                color: rgb(242, 238, 238);
+                border: none;
+                outline: none;
+                background-color: rgb(68, 68, 183);
+              }
+            }
+          }
+        }
+      }
+     }
+}

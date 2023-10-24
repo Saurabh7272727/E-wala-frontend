@@ -1,0 +1,50 @@
+.production_side_section_main{
+    width: 100%;
+    height: fit-content;
+    padding: 4rem 0rem 0rem 0rem;
+    .loading_side_production{
+        width: 100%;
+        height: 400px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        h2{
+            font-size: 21px;
+            font-family: sans-serif;
+            font-weight: 300;
+        }
+    }
+    .main_content_production_page{
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.075);
+        img{
+            width: 100%;
+            height: 80vh;
+            position: absolute;
+            z-index: -133;
+            object-fit: contain;
+        }
+        .main_section_by_video_production{
+            width: 100%;
+            height: 80vh;
+            background-color: rgba(0, 0, 0, 0.089);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .githup_page{
+                width: 40%;
+                height: 250px;
+                background-color: white;
+                padding: 2rem 3rem;
+                p{
+                    font-size: 14px;
+                    font-family: serif;
+                    font-weight: 200;
+                    color: gray;
+                    padding: 0.2rem 0rem;
+                }
+            }
+        }
+    }
+    }

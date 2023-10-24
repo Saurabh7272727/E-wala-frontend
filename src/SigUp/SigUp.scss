@@ -1,0 +1,100 @@
+.sigup_page_main{
+    padding: 6rem 0rem;
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .left_section_of_sigup_page{
+        width: 20%;
+        height: 90%;
+        background-color: #4BBAFF;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        h2{
+            width: 90%;
+            font-size: 30px;
+            font-weight: 600;
+            font-family: sans-serif;
+            color: white;
+        }
+        p{
+            width: 90%;
+            font-size: 16px;
+            font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-weight: 100;
+            color: white;
+        }
+        img{
+            width:80%;
+            height: 70%;
+            object-fit: contain;
+        }
+    }
+
+
+    .right_section_of_sign_page{
+        width: 25%;
+        height: 90%;
+        form{
+            width:100%;
+            height: 34%;
+             padding: 1rem 2rem; 
+              input{
+                width: 90%;
+                 border: none;
+                 border-bottom:1px solid  #2874F0;
+                 font-size: 21px;
+                 font-family: sans-serif;
+                 font-weight: 300;
+                 padding: 0.4rem 1rem;
+                 outline: none;
+             }
+             p{
+                font-size: 14px;
+                font-family:Arial, Helvetica, sans-serif;
+                font-weight: 300;
+             }
+               .button_main{
+                width: 100%;
+                   padding: 0.5rem 5rem;
+                   font-size: 18px;
+                   font-weight: 300;
+                   font-family: sans-serif;
+                   background-color: #FB641B;
+                   display: block;
+                   border: none;
+                   outline: none;
+                   color: white;
+                   &:active{
+                    background-color: #76320f;
+                   }
+                }
+        }
+        .login_page_navi{
+            width: 100%;
+            height: 40%;
+            padding: 1rem 2rem; 
+            display: flex;
+            align-items: start;
+            .login_button_page_navi{
+                width: 100%;
+                padding: 0.5rem 5rem;
+                font-size: 18px;
+                font-weight: 300;
+                font-family: sans-serif;
+                background-color: white;
+                display: block;
+                border: none;
+                outline: none;
+                color: blue;
+                box-shadow: 4px 6px 9px gray;
+               }
+    
+        }
+    }
+
+   
+}
