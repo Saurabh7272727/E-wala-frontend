@@ -13,9 +13,9 @@ const Production = ({ datas, loadings }) => {
                                 <p>I am saurabh</p>
                                 <p>Welcome</p>
                                 <p>You see source code of this website</p>
-                                <h3>Click in open buuton </h3>
-                                <p>Clone git repo and start you projects</p>
-                                <a href="">frontend</a> <br /><a href="">Backend</a>
+                                <h3>Click in open button </h3>
+                                <p>Clone git repo and start you projects</p><br />
+                                <a href="https://github.com/Saurabh7272727/E-wala-frontend">frontend</a> <br /><br /><a href="https://github.com/Saurabh7272727/E-wala-backend">Backend</a>
                             </div>
                         </div>
                     </div>

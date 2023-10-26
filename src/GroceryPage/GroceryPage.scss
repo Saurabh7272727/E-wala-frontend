@@ -1,0 +1,78 @@
+.grocery_page_section_side{
+    width: 100%;
+    height: fit-content;
+    background-color: aliceblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5rem 0rem;
+    .grocery_check_section{
+        width: 85%;
+        height: fit-content;
+        background-color: white;
+        .img_section_production{
+            width: 100%;
+            height: 300px;
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+    .loading_section_of_grocery{
+        width: 100%;
+        height: 300px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .main_production_box_grocery{
+        width: 100%;
+        height: fit-content;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.2rem 0.3rem;
+        justify-content: space-evenly;
+        padding: 0.5rem 0rem;
+        .kaya_section_main_boxes{
+            width: 48%;
+            height: 260px;
+            background-color: rgba(0, 0, 0, 0.308);
+            overflow: hidden;
+            .main_about_products_grocery{
+                width: 780px;
+                height: 260px;
+                background-color: rgba(0, 0, 0, 0.829);
+                position:absolute;
+                display: flex;
+                flex-direction: column;
+                justify-content: end;
+                padding: 2rem 3rem;
+                color: rgb(180, 172, 172);
+                gap: 0.4rem;
+                h1{
+                    font-size: 21px;
+                    font-family: sans-serif;
+                    font-weight: 300;
+                }h2{
+                    font-size: 18px;
+                    font-family: sans-serif;
+                    font-weight: 300;
+                }p{
+                    font-size: 16px;
+                    font-family: sans-serif;
+                    font-weight: 200;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                    white-space: nowrap;
+                }
+            }
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit:fill;
+            }
+        }
+    }
+}

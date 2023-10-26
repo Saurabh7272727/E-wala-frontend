@@ -4,7 +4,7 @@ import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import { FcApproval } from 'react-icons/fc';
 import DupfetchApi from '../Server/Server.jsx';
-
+import { useNavigate } from 'react-router-dom';
 const DetailsPage = ({ datas, loadings }) => {
     const { id } = useParams();
     const [data, setData] = useState();
@@ -14,6 +14,8 @@ const DetailsPage = ({ datas, loadings }) => {
     const [main, setMain] = useState(null);
     const [products, setProducts] = useState(null);
     const URL = `http://localhost:3000/detailspage/${id}`;
+    const navi = useNavigate();
+
     const fetchApi = async () => {
         await axios.get(URL, {
             headers: {
@@ -37,6 +39,10 @@ const DetailsPage = ({ datas, loadings }) => {
     setTimeout(() => {
         setTime(false);
     }, 2000);
+    const OrederHanlder = () => {
+        navi(`/orders/${id}/E-wala/officalsite/1`);
+        alert(`Hi ${datas?.firstName} ${datas?.lastName}`)
+    }
     return (
         <>
             {
@@ -70,9 +76,10 @@ const DetailsPage = ({ datas, loadings }) => {
                                     )
                                 })}
                             </ul><br />
+                            {/* () => */}
                             {
                                 datas ? <div className='add_cart_function_details'>
-                                    <button>Buy Now</button>
+                                    <button onClick={OrederHanlder}>Buy Now</button>
                                     {
                                         dupData?.error ? <form action={`http://localhost:3000/addtocart`} method='post'>
                                             <input type="text" value={datas?._id} name='account' />

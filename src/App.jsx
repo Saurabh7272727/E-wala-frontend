@@ -16,6 +16,9 @@ import TypeData from './TypeData/TypeData';
 import DetailsPage from './DetailsPage/DetailsPage';
 import Production from './Production/Production';
 import fetchApiLength from './Server/LengthHeader.jsx';
+import GroceryPage from './GroceryPage/GroceryPage';
+import Payment from './payment/Payment';
+import OrderList from './OrderList/OrderList';
 const App = () => {
   const [data, setData] = useState();
   const [loading, setLoading] = useState(true);
@@ -48,7 +51,7 @@ const App = () => {
           <Route path='/' element={<Home />} />
           <Route path='/sigup' element={<SigUp />} />
           <Route path='/myprofile' element={<MyProfile />} />
-          <Route path='/orders' element={<Orders />} />
+          <Route path='/orders/:id/E-wala/officalsite/:num' element={<Orders datas={data} loadings={loading} />} />
           <Route path='/sigup/:number' element={<MainSigupPage />} />
           <Route path='/login' element={<Login />} />
           <Route path='/logout/:id' element={<Logout />} />
@@ -56,6 +59,9 @@ const App = () => {
           <Route path='/typedata/:type' element={<TypeData datas={data} loadings={loading} />} />
           <Route path='/detailspage/:id' element={<DetailsPage datas={data} loadings={loading} />} />
           <Route path='/production' element={<Production datas={data} loadings={loading} />} />
+          <Route path='/grocerypage/:query/latest/model/offers' element={<GroceryPage datas={data} loadings={loading} />} />
+          <Route path='/payment' element={<Payment />} />
+          <Route path='/orderlist' element={<OrderList datas={data} loadings={loading} />} />
         </Routes>
         <Footer />
       </BrowserRouter>

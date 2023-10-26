@@ -2,15 +2,18 @@ import React from 'react'
 import './Home.scss';
 import HomeComponents from './HomeComponents/HomeComponents';
 import Products from './Products/Products';
+import { useNavigate } from 'react-router-dom';
 const Home = () => {
+    const navi = useNavigate();
+
     return (
         <div className='home'>
             <div className="main_home_section_headers">
-                <div className="home_header_boxes">
+                <div className="home_header_boxes" onClick={() => navi(`/grocerypage/grocery/latest/model/offers`)}>
                     <img src="https://rukminim1.flixcart.com/flap/64/64/image/29327f40e9c4d26b.png?q=100" alt="" />
                     <p>Grocery</p>
                 </div>
-                <div className="home_header_boxes">
+                <div className="home_header_boxes" onClick={() => navi(`/grocerypage/mobile/latest/model/offers`)}>
                     <img src="https://rukminim1.flixcart.com/flap/64/64/image/22fddf3c7da4c4f4.png?q=100" alt="" />
                     <p>Mobiles</p>
                 </div>

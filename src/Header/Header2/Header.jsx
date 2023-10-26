@@ -37,7 +37,7 @@ const Header2 = ({ data, loading, lengthData }) => {
                 navi(`/logout/${data?._id}`);
                 break;
             case "Orders":
-                alert("your order has been canceled");
+                navi(`/orderlist`);
                 break;
         }
     }

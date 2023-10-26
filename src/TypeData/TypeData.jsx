@@ -57,7 +57,7 @@ const TypeData = ({ datas, loadings }) => {
                                                 </ul>
                                                 <h1>Price {e?.price}</h1>
                                                 {
-                                                    datas ? <button type='submit'>Buy</button>
+                                                    datas ? <button type='submit' onClick={() => navi(`/orders/${e?._id}/E-wala/officalsite/1`)}>Buy</button>
                                                         : <button onClick={() => navi('/sigup')}>Login </button>
                                                 }
 

@@ -86,7 +86,10 @@ const Card = () => {
                         </div> : ""
                     }
                     {
-                        showData ? <div className='grocery_section_main'>g</div> : <div className='flipkart_main_section_card'>
+                        showData ? <div className='grocery_section_main'>
+                            <img src="https://i.pinimg.com/originals/ae/8a/c2/ae8ac2fa217d23aadcc913989fcc34a2.png" alt="" />
+                            <button onClick={() => navi('/')}>Shop Now</button>
+                        </div> : <div className='flipkart_main_section_card'>
                             {
                                 data?.map((e, index) => {
                                     return <div className='card_products_add_to_card' key={index}>
@@ -113,7 +116,7 @@ const Card = () => {
                                                         <input type="text" value={e?._id} name='id' />
                                                         <button style={{ backgroundColor: "red" }} type='submit'>Delect</button>
                                                     </form>
-                                                    <button style={{ backgroundColor: "orangered" }}>Buy</button>
+                                                    <button onClick={() => navi(`/orders/${e?.products_id}/E-wala/officalsite/${e?.quantity}`)} style={{ backgroundColor: "orangered" }}>Buy</button>
                                                 </div>
                                             </div>
                                         </div>
