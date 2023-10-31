@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './Home/Home';
 import Header from './Header/Header.jsx';
@@ -19,6 +19,7 @@ import fetchApiLength from './Server/LengthHeader.jsx';
 import GroceryPage from './GroceryPage/GroceryPage';
 import Payment from './payment/Payment';
 import OrderList from './OrderList/OrderList';
+import LoadingBar from 'react-top-loading-bar'
 const App = () => {
   const [data, setData] = useState();
   const [loading, setLoading] = useState(true);
@@ -41,8 +42,10 @@ const App = () => {
   }, []);
   const { lengthData, lengthLoading } = fetchApiLength(`${data?._id}`);
 
+  const ref = useRef(null)
   return (
     <>
+      <LoadingBar style={{ color: "red", height: "10px" }} ref={ref} />
       <BrowserRouter>
         {
           data ? <Header2 lengthData={lengthData} data={data} loading={loading} /> : <Header />

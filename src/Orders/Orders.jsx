@@ -7,7 +7,7 @@ const Orders = ({ datas, loadings }) => {
     const { id, num } = useParams();
     const [data, setData] = useState();
     const [loading, setLoading] = useState(true);
-    const [counter, setCounter] = useState(num || 1);
+    const [counter, setCounter] = useState(1);
 
     const [amountChanger, setAmounteChanger] = useState();
     const URL = `http://localhost:3000/detailspage/${id}`;

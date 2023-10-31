@@ -26,6 +26,10 @@ const TypeData = ({ datas, loadings }) => {
         fetchApi();
     }, [])
     // const { dupData, DupLoading } = DupfetchApi();
+
+    const DetailsPageNavi = (id) => {
+        window.open(`http://localhost:5173/detailspage/${id}`);
+    }
     return (
         <>
             <div className="type_main_section">
@@ -37,6 +41,7 @@ const TypeData = ({ datas, loadings }) => {
                             datas ? <h1 style={{ color: "white" }}>status : Logged</h1> : <h1 style={{ color: "red" }}>status : Not Login</h1>
                         }
                     </div>
+                    {/* `/detailspage/${e?._id} */}
                     {
                         loading ? <div className='loading_section_main_main'>
                             <div className="child_of_loading_section"></div>
@@ -45,7 +50,7 @@ const TypeData = ({ datas, loadings }) => {
                                 data?.map((e, index) => {
                                     return (
                                         <div className='products_box_in_section' key={index}>
-                                            <img src={e?.poster_img} alt="" onClick={() => navi(`/detailspage/${e?._id}`)} />
+                                            <img src={e?.poster_img} alt="" onClick={() => DetailsPageNavi(e?._id)} />
                                             <div className="details_abou_products">
                                                 <h1 onClick={() => navi(`/detailspage/${e?._id}`)}>{e?.title}</h1>
                                                 <ul>
