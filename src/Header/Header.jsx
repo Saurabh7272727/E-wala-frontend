@@ -37,15 +37,21 @@ const Header = () => {
 
     const ref = useRef(null)
     window.addEventListener("scroll", ScrollerHandler);
+
+    const keyfunction = (event) => {
+        if (event.key == 'Enter') {
+            navi(`/searchPage/${data?._id}/${event.target.value}`);
+        }
+    }
     return (
         <>
             <LoadingBar style={{ color: "red", height: "3px" }} ref={ref} />
             <header className={`${headers ? "new_headers" : ""}`}>
                 <div className="logo_section_web" onClick={() => navi('/')}>
-                    <img src="https://static-assets-web.flixcart.com/batman-returns/batman-returns/p/images/flipkart-095e08.svg" alt="" onClick={() => ref.current.complete()} />
+                    <img src="https://static.vecteezy.com/system/resources/previews/006/547/161/original/creative-modern-abstract-ecommerce-logo-design-colorful-gradient-online-shopping-bag-logo-design-template-free-vector.jpg" alt="" onClick={() => ref.current.complete()} />
                 </div>
                 <div className="search_section_header_main">
-                    <AiOutlineSearch className='search_icons' />  <input type="text" placeholder='Search for Products, Brandsand More' />
+                    <AiOutlineSearch className='search_icons' />  <input type="text" onKeyUp={keyfunction} onClick={() => alert("Invalid")} placeholder='Search for Products, Brandsand More' />
                 </div>
                 <div className="option_header_section">
                     <h1 onClick={() => navi('/production')}><FaStore className='search_icons' />About E-wala</h1>

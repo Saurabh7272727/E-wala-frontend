@@ -7,9 +7,11 @@ import { AiOutlineSearch } from 'react-icons/ai';
 import { FaStore } from 'react-icons/fa';
 import Select from 'react-select';
 import { useNavigate } from 'react-router-dom';
+
 const Header2 = ({ data, loading, lengthData }) => {
     const [headers, setHeaders] = useState(false);
     const [dotaHan, setDotHan] = useState(false);
+
     const navi = useNavigate();
     const option = [
         { label: "Logout", value: "Logout" },
@@ -45,14 +47,22 @@ const Header2 = ({ data, loading, lengthData }) => {
         navi('/');
         window.location.reload();
     }
+    //    keyfunction
+
+    const keyfunction = (event) => {
+        if (event.key == 'Enter') {
+            navi(`/searchPage/${data?._id}/${event.target.value}`);
+        }
+    }
+
     return (
         <>
             <header className={`${headers ? "new_headers" : ""}`}>
                 <div className="logo_section_web" onClick={HomeHandler}>
-                    <img src="https://static-assets-web.flixcart.com/batman-returns/batman-returns/p/images/flipkart-095e08.svg" alt="" />
+                    <img src="https://static.vecteezy.com/system/resources/previews/006/547/161/original/creative-modern-abstract-ecommerce-logo-design-colorful-gradient-online-shopping-bag-logo-design-template-free-vector.jpg" alt="" />
                 </div>
                 <div className="search_section_header_main">
-                    <AiOutlineSearch className='search_icons' />  <input type="text" placeholder='Search for Products, Brandsand More' />
+                    <AiOutlineSearch className='search_icons' />  <input type="text" onKeyUp={keyfunction} placeholder='Search for Products, Brandsand More' onClick={() => navi(`/searchPage/${data?._id}`)} />
                 </div>
                 <div className="option_header_section">
                     <h1 onClick={() => navi('/production')}><FaStore className='search_icons' /> About E-wala</h1>

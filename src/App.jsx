@@ -19,7 +19,8 @@ import fetchApiLength from './Server/LengthHeader.jsx';
 import GroceryPage from './GroceryPage/GroceryPage';
 import Payment from './payment/Payment';
 import OrderList from './OrderList/OrderList';
-import LoadingBar from 'react-top-loading-bar'
+import LoadingBar from 'react-top-loading-bar';
+import SearchPage from './Search/searchPage.jsx'
 const App = () => {
   const [data, setData] = useState();
   const [loading, setLoading] = useState(true);
@@ -65,6 +66,8 @@ const App = () => {
           <Route path='/grocerypage/:query/latest/model/offers' element={<GroceryPage datas={data} loadings={loading} />} />
           <Route path='/payment' element={<Payment />} />
           <Route path='/orderlist' element={<OrderList datas={data} loadings={loading} />} />
+          <Route path='/searchPage/:id' element={<SearchPage data={data} loadings={loading} />} />
+          <Route path='/searchPage/:id/:search' element={<SearchPage data={data} loadings={loading} />} />
         </Routes>
         <Footer />
       </BrowserRouter>
