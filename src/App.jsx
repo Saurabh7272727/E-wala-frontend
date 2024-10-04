@@ -20,7 +20,9 @@ import GroceryPage from './GroceryPage/GroceryPage';
 import Payment from './payment/Payment';
 import OrderList from './OrderList/OrderList';
 import LoadingBar from 'react-top-loading-bar';
-import SearchPage from './Search/searchPage.jsx'
+import SearchPage from './Search/searchPage.jsx';
+import Internet from './Internet/Internet.jsx';
+import ErrorThrow from './Error/ErrorThrow.jsx';
 const App = () => {
   const [data, setData] = useState();
   const [loading, setLoading] = useState(true);
@@ -68,6 +70,8 @@ const App = () => {
           <Route path='/orderlist' element={<OrderList datas={data} loadings={loading} />} />
           <Route path='/searchPage/:id' element={<SearchPage data={data} loadings={loading} />} />
           <Route path='/searchPage/:id/:search' element={<SearchPage data={data} loadings={loading} />} />
+          <Route path='/internet/user/file' element={<Internet />} />
+          <Route path='*' element={<ErrorThrow />} />
         </Routes>
         <Footer />
       </BrowserRouter>

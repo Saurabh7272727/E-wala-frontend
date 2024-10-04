@@ -1,0 +1,86 @@
+.inter_main_head{
+    width: 100%;
+    height: 80vh;
+    padding-top: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 20px;
+    .output_section{
+        width: 60%;
+        height: 90%;
+      padding: 10px 10px;
+      overflow-y: scroll;
+      h3{
+        word-spacing: 3px;
+        font-size: 23px;
+        font-family: sans-serif;
+        font-weight: 200;
+      }
+    }
+    .message_box{
+        width: 30%;
+        height: 90%;
+        background-color: rgba(223, 215, 218, 0.479);
+        .lastMessage{
+            width: 100%;
+            height: 76%;
+            padding: 20px 30px;
+            li{
+                list-style: decimal-leading-zero;
+                font-size: 20px;
+                font-weight: 300;
+                font-family: sans-serif;
+                color: darkblue;
+            }
+        }
+        .input_question_box{
+            width: 100%;
+            height: 24%;
+            background-color: rgb(245, 245, 245);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+            gap: 1px;
+            input{
+                width: 70%;
+                height:40px ;
+                padding: 0px 20px;
+                font-size: 19px;
+                color: black;
+                border: 2px solid rgb(14, 125, 168);
+            }
+            input:active{
+                border: 2px solid rgb(14, 125, 168);
+            }
+
+            button{
+                width: 100px;
+                height:40px ; 
+                color: white;
+                background-color: rgb(14, 125, 168);
+                border: 1px solid transparent;
+                border-radius: 3px;
+                font-size: 18px;
+                font-weight: 200;
+            }
+            button:hover{
+                width: 100px;
+                height:40px ; 
+                color: white;
+                background-color: rgb(13, 82, 109);
+                border: 1px solid transparent;
+                border-radius: 3px;
+                font-size: 18px;
+                font-weight: 200;
+                transform: scale(0.999);
+            }
+            button:active{
+                background-color: rgb(201, 36, 24);
+            }
+        }
+    }
+}

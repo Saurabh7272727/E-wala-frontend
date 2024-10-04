@@ -56,7 +56,10 @@ const SearchPage = ({ data, loadings }) => {
                     <p>
                         There are you searched a product to buy and add cart section.
                         <br />
-                        status - {data?.ip}XXXXXXXXXXX
+                        status - {data?.ip}XXXXXXXXXXX <br /><br />
+                        <button onClick={() => {
+                            Navi('/internet/user/file')
+                        }}>Internet</button>
                     </p><br />
                     <p style={{ color: "red" }}>{searchData?.length == 0 ? <p>Not found</p> : <p>Results E-Wala</p>}__ {search} </p>
                 </div>
