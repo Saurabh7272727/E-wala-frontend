@@ -8,33 +8,93 @@
     justify-content: center;
     flex-direction: row;
     gap: 20px;
+    .output_section_modi{
+        width: 100%;
+        height: 100%;
+      margin-left: 30px;
+      overflow-y: scroll;
+      overflow-x: hidden;
+      text-overflow:unset;
+      padding: 30px 30px;
+      overflow-wrap: initial;
+      pre{
+        word-spacing: 2px;
+        font-size: 21px;
+        font-family: sans-serif;
+        font-weight: 200;
+      }
+      button{
+        position: absolute;
+        width: 100px;
+        height: 50px;
+        bottom: 230px;
+        left: 1600px;
+        font-size: 23px;
+        border: 0px solid transparent;
+        color: rgb(42, 207, 9);
+        background-color: transparent;
+      }
+      button:hover{
+        color: rgb(24, 13, 172);
+        transform: rotate(30deg) scale(0.8);
+      }
+    }
     .output_section{
         width: 60%;
         height: 90%;
       padding: 10px 10px;
       overflow-y: scroll;
-      h3{
+      overflow-x: hidden;
+      text-overflow:unset;
+      pre{
         word-spacing: 3px;
         font-size: 23px;
         font-family: sans-serif;
         font-weight: 200;
       }
+      button{
+        position: absolute;
+        width: 100px;
+        height: 50px;
+        bottom: 300px;
+        left: 900px;
+        font-size: 23px;
+        border: 0px solid transparent;
+        color: blue;
+        background-color: transparent;
+      }
+      button:hover{
+        color: green;
+        transform: rotate(30deg) scale(0.8);
+      }
+    }
+    .message_box_hidden{
+        display: none;
     }
     .message_box{
         width: 30%;
         height: 90%;
-        background-color: rgba(223, 215, 218, 0.479);
+        background-color:#F3F3F5;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         .lastMessage{
             width: 100%;
-            height: 76%;
+            height: 47%;
             padding: 20px 30px;
-            li{
+            li{ 
                 list-style: decimal-leading-zero;
                 font-size: 20px;
                 font-weight: 300;
                 font-family: sans-serif;
                 color: darkblue;
             }
+        }
+        img{
+          box-shadow: 10px 10px 30px rgba(255, 0, 0, 0.466);
+          border-radius: 50%;
+          margin-bottom: 10px;
         }
         .input_question_box{
             width: 100%;

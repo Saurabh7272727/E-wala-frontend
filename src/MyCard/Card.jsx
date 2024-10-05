@@ -3,6 +3,7 @@ import axios from 'axios';
 import { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import './Card.scss';
+import ErrorThrow from '../Error/ErrorThrow.jsx';
 const Card = () => {
     const [data, setData] = useState();
     const [loading, setLoading] = useState(true);
@@ -58,6 +59,11 @@ const Card = () => {
                 break;
         }
     }
+
+    if (counter == 0) {
+        navi('*');
+    }
+
     return (
         <>
             {

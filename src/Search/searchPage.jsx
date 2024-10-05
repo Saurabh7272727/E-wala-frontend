@@ -57,7 +57,7 @@ const SearchPage = ({ data, loadings }) => {
                         There are you searched a product to buy and add cart section.
                         <br />
                         status - {data?.ip}XXXXXXXXXXX <br /><br />
-                        <button onClick={() => {
+                        <button className='button-86' onClick={() => {
                             Navi('/internet/user/file')
                         }}>Internet</button>
                     </p><br />
