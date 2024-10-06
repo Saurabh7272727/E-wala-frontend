@@ -51,7 +51,7 @@ const Internet = () => {
         <>
             <div className="inter_main_head">
                 {
-                    searchDataLaoding ? <div className='output_section'>Search Data ...........</div> : <div className={hidden ? "output_section_modi" : "output_section"}><pre>{searchData?.data}</pre><button onClick={() => { setHidden(!hidden) }}><BsArrowsFullscreen /></button></div>
+                    searchDataLaoding ? <div className='output_section'>Search Data ...........</div> : <div className={hidden ? "output_section_modi" : "output_section"}><pre>{searchData?.data.replace('**', "=>")}</pre><button onClick={() => { setHidden(!hidden) }}><BsArrowsFullscreen /></button></div>
                 }
                 <div className={hidden ? "message_box_hidden" : "message_box"}>
                     <div className="lastMessage">{ArrayData.map((data, index) => {
